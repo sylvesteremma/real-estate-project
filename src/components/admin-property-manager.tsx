@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, useTransition } from "react";
+// import { useEffect, useState, useTransition } from "react";
+import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { ImagePlus, Pencil, Plus, Save, Trash2, X } from "lucide-react";
 import type { ManagedProperty } from "@/lib/property-listings";
@@ -25,9 +26,9 @@ export function AdminPropertyManager({
   const [message, setMessage] = useState<string | null>(null);
   const [isPending, startTransition] = useTransition();
 
-  useEffect(() => {
-    setProperties(initialProperties);
-  }, [initialProperties]);
+  // useEffect(() => {
+  //   setProperties(initialProperties);
+  // }, [initialProperties]);
 
   function submitProperty(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
